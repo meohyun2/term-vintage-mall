@@ -16,12 +16,20 @@ const Content = () => {
 
   return (
     <ContentDiv>
-      <Route exact path={path}>
-        여기다가 Content 담아
-      </Route>
-      <Route path={`${path}outer`}>
-        <Cloth/>
-      </Route>
+      <Switch>
+        <Route exact path={path}>
+          여기다가 Content 담아
+        </Route>
+        <Route path={`/outer`}>
+          <Cloth/>
+        </Route>
+        <Route path={`/top`}>
+          <Cloth/>
+        </Route>
+        <Route path={`/bottom`}>
+          <Cloth/>
+        </Route>
+      </Switch>
     </ContentDiv>
   )
 }

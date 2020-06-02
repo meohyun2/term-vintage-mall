@@ -17,7 +17,7 @@ const MenuNavigator = () =>{
     <MenuDiv>
       <ul>
         <li>
-          <Link to={`${url}outer`}>Outer</Link>
+          <Link to={`/outer`}>Outer</Link>
         </li>
       </ul>
     </MenuDiv>

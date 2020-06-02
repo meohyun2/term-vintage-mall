@@ -36,7 +36,6 @@ const tailLayout = {
 
 const SignInPage = ({match}) =>{
   const [userInfo,setUserInfo] = useState();
-
   const onFinish = values => {
     console.log('Success:', values);
   };
