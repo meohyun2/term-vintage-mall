@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import { Switch } from 'react-router-dom';
 
 const Div = styled.div`
+  width : 1200px;
+  height : 900px;
   margin : 1.5em;
   padding : 1.5em;
   display: flex;

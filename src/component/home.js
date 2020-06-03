@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './header/header';
 import Body from './body/body';
 import styled from 'styled-components';
+import Footer from './footer/footer';
 
 const Div = styled.div`
   box-container {
@@ -20,6 +21,7 @@ const HomePage = () => {
     <Div>
       <Header></Header>
       <Body></Body>
+      <Footer></Footer>
     </Div>
   )
 }

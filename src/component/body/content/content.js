@@ -1,7 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Route,useRouteMatch, Switch} from 'react-router-dom';
-import Cloth from './cloth';
+import Outer from '../shop/outer';
+import Top from '../shop/top';
+import Bottom from '../shop/bottom';
+import MyPage from '../content/navBar/MyPage';
+import MyTransaction from '../content/navBar/MyTransaction';
+import Board from '../content/navBar/Board';
 
 const ContentDiv = styled.div`
   width: 75%;
@@ -21,13 +26,22 @@ const Content = () => {
           여기다가 Content 담아
         </Route>
         <Route path={`/outer`}>
-          <Cloth/>
+          <Outer/>
         </Route>
         <Route path={`/top`}>
-          <Cloth/>
+          <Top/>
         </Route>
         <Route path={`/bottom`}>
-          <Cloth/>
+          <Bottom/>
+        </Route>
+        <Route path={`/mypage`}>
+          <MyPage/>
+        </Route>
+        <Route path={`/board`}>
+          <Board/>
+        </Route>
+        <Route path={`/mytransaction`}>
+          <MyTransaction/>
         </Route>
       </Switch>
     </ContentDiv>

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const MenuDiv = styled.div`
  flex: none;
+ margin-top : 0px;
  display:flex;
  align-items:center;
 `;  

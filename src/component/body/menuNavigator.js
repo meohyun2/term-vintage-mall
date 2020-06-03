@@ -19,6 +19,12 @@ const MenuNavigator = () =>{
         <li>
           <Link to={`/outer`}>Outer</Link>
         </li>
+        <li>
+          <Link to={`/top`}>Top</Link>
+        </li>
+        <li>
+          <Link to={`/bottom`}>Bottom</Link>
+        </li>
       </ul>
     </MenuDiv>
   )

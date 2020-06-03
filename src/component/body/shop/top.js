@@ -7,13 +7,12 @@ const ClothDiv = styled.div`
   align-items:center;
 `;
 
-const Cloth =()=> {
-
+const Top = () => {
   return(
     <ClothDiv>
-      <h1>컨텐츠 렌더링 성공</h1>
+      <h1> Top 렌더링 성공! </h1>
     </ClothDiv>
   )
 }
 
-export default Cloth;
+export default Top;

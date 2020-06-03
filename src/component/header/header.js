@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './navBar/navBar'
+import Navbar from './navBar'
 import SignInButton from './loginForm/SignInButton';
 import SignUpButton from './loginForm/SignUpButton';
 import styled from 'styled-components';
