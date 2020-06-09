@@ -8,16 +8,11 @@ import SignUpPage from './component/auth/signupPage';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
+    <div className="App">
+      <Switch>
         <Route path="/" component={HomePage} />
-        <Switch>
-          <Route exact path = "/signup" component={SignUpPage}/>
-          <Route exact path = "/signin" component={SignInPage}/>
-          <Route path = "/signin/:id" component = {SignInPage}/>
-        </Switch>
-      </div>
-    </Router>
+      </Switch>
+    </div>
   );
 }
 

@@ -34,7 +34,7 @@ const tailLayout = {
   },
 };
 
-const SignInPage = ({match}) =>{
+const SignInPage = () =>{
   const [userInfo,setUserInfo] = useState();
   const onFinish = values => {
     console.log('Success:', values);
@@ -47,7 +47,7 @@ const SignInPage = ({match}) =>{
   return (
     <LoginFormDiv>
       <a href="http://localhost:3000/">
-        <h1>{match.params.id}님,로그인 하세요.</h1>
+        <h1>로그인 하세요.</h1>
       </a>
       <Form
         {...layout}
