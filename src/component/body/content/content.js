@@ -1,12 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Route,useRouteMatch, Switch} from 'react-router-dom';
-import Outer from '../shop/outer';
-import Top from '../shop/top';
-import Bottom from '../shop/bottom';
+import Amekaji from '../shop/AmekajiPage';
+import AmericanVintage from '../shop/AmericanVintagePage';
+import Funk from '../shop/FunkPage';
+import Grunge from '../shop/GrungePage';
+import OldSchool from '../shop/OldschoolPage';
+import Workwear from '../shop/WorkwearPage';
+import Hippy from '../shop/HippyPage';
 import MyPage from '../content/navBar/MyPage';
 import MyTransaction from '../content/navBar/MyTransaction';
 import Board from '../content/navBar/Board';
+import ItemInfo from '../shop/shopping/iteminfo';
 
 const ContentDiv = styled.div`
   width: 75%;
@@ -25,14 +30,29 @@ const Content = () => {
         <Route exact path={path}>
           여기다가 Content 담아
         </Route>
-        <Route path={`/outer`}>
-          <Outer/>
+        <Route path={`/grunge/:page`}>
+          <Grunge/>
         </Route>
-        <Route path={`/top`}>
-          <Top/>
+        <Route path={`/oldSchool/:page`}>
+          <OldSchool/>
         </Route>
-        <Route path={`/bottom`}>
-          <Bottom/>
+        <Route path={`/amekaji/:page`}>
+          <Amekaji/>
+        </Route>
+        <Route path={`/americanVintage/:page`}>
+          <AmericanVintage/>
+        </Route>
+        <Route path={`/workwear/:page`}>
+          <Workwear/>
+        </Route>
+        <Route path={`/funk/:page`}>
+          <Funk/>
+        </Route>
+        <Route path={`/hippy/:page`}>
+          <Hippy/>
+        </Route>
+        <Route path={`/item/:index`}>
+          <ItemInfo/>
         </Route>
         <Route path={`/mypage`}>
           <MyPage/>

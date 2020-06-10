@@ -5,14 +5,17 @@ import HomePage from './component/home';
 import SignInPage from './component/auth/signinPage';
 import SignUpPage from './component/auth/signupPage';
 
+const Div = styled.div`
+  background-color: #FFFFFF;
+`;
 
 function App() {
   return (
-    <div className="App">
+    <Div className="App">
       <Switch>
         <Route path="/" component={HomePage} />
       </Switch>
-    </div>
+    </Div>
   );
 }
 

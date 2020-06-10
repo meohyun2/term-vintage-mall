@@ -17,13 +17,25 @@ const MenuNavigator = () =>{
     <MenuDiv>
       <ul>
         <li>
-          <Link to={`/outer`}>Outer</Link>
+          <Link to={`/amekaji/1`}>Amekaji</Link>
         </li>
         <li>
-          <Link to={`/top`}>Top</Link>
+          <Link to={`/americanVintage/1`}>American Vintage</Link>
         </li>
         <li>
-          <Link to={`/bottom`}>Bottom</Link>
+          <Link to={`/hippy/1`}>Hippy</Link>
+        </li>
+        <li>
+          <Link to={`/workwear/1`}>Workwear</Link>
+        </li>
+        <li>
+          <Link to={`/oldschool/1`}>Old School</Link>
+        </li>
+        <li>
+          <Link to={`/funk/1`}>Funk</Link>
+        </li>
+        <li>
+          <Link to={`/grunge/1`}>Grunge</Link>
         </li>
       </ul>
     </MenuDiv>

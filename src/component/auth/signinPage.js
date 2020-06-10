@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import 'antd/dist/antd.css';
 import { Form, Input, Button, Checkbox } from 'antd';
 import styled from 'styled-components';
+import {LoginFetch} from '../../api/loginFetch';
 
 const LoginFormDiv = styled.div`
   display: flex;
@@ -34,10 +35,17 @@ const tailLayout = {
   },
 };
 
-const SignInPage = () =>{
-  const [userInfo,setUserInfo] = useState();
-  const onFinish = values => {
-    console.log('Success:', values);
+const SignInPage = ({history}) =>{
+
+  const onFinish = async(values) => {
+    const loginResult = await LoginFetch(values.username,values.password)
+    if(loginResult){
+      console.log(loginResult);
+      const loginResultJson = await loginResult.json();
+      console.log(loginResultJson);
+      sessionStorage.setItem("token",loginResultJson.data.token);
+      history.push('/');
+    }
   };
 
   const onFinishFailed = errorInfo => {
@@ -47,8 +55,9 @@ const SignInPage = () =>{
   return (
     <LoginFormDiv>
       <a href="http://localhost:3000/">
-        <h1>로그인 하세요.</h1>
+        홈으로 가기
       </a>
+      <h1>로그인 하세요.</h1>
       <Form
         {...layout}
         name="basic"

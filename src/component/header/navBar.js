@@ -3,13 +3,18 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
 const NavDiv = styled.div`
- margin : 1.2em;
+ margin-left : 10em;
+ padding:1.5em;
  display : flex;
- justify-content:center;
+ justify-content: flex-end;
+ align-items:center;
 `;
 
 const H2 = styled.h2`
-  margin: 20px;
+  margin-left: 40px;
+  margin-right : 100px;
+  font-size:20pt;
+  color:white;
 `;
 
 

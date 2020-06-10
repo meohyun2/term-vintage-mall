@@ -5,14 +5,15 @@ import styled from 'styled-components';
 import { Switch } from 'react-router-dom';
 
 const Div = styled.div`
-  width : 1200px;
-  height : 900px;
+  height : 700px;
   margin : 1.5em;
   padding : 1.5em;
   display: flex;
-  border: 1px solid red;
+  border: 4mm ridge rgba(170, 50, 220, .6);
   flex-direction: row;
   justify-content: center;
+  background-color:black;
+  color:red;
 `;
 
 const Body = () => {
