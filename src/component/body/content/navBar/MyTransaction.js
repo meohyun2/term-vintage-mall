@@ -18,7 +18,6 @@ const H1 = styled.h1`
 const Ul = styled.ul`
   flex:1;
   display:flex;
-  align-items:center;
   flex-direction:column;
   overflow:scroll;
 `;
@@ -44,6 +43,7 @@ const MyTransaction = () => {
                   <li>
                     <H1 key={i}>
                       물품 번호 : {item.product_id}<br/>
+                      물품 이름 : {item.product_name}<br/>
                       거래 날짜 : {moment(item.transaction_date).format("YYYY[-]MM[-]DD")}
                     </H1>
                   </li>

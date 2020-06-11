@@ -30,12 +30,10 @@ const HomePage = () => {
       // 토큰이 발급 된 상태
       checkAuth(sessionAuth)
       .then((res)=>{
-        res.json()
-        .then((jsonRes)=>{
-          if(jsonRes.status==200){
-            setTokenFlag("1"); // 로그인 완료
-          }
-        })
+        console.log(res);
+        if(res.status==200){
+          setTokenFlag("1"); // 로그인 완료
+        }
       })
     }else{
       //로그인도 안한 상태

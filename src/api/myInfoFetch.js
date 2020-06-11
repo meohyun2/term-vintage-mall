@@ -37,5 +37,5 @@ module.exports = {
       console.log(res);
       return res.json();
     })
-  }
+  },
 }

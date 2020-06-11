@@ -32,20 +32,14 @@ const ItemInfo = ({history}) =>{
       // fetch
       checkAuth(token)
       .then((res)=>{
-        res.json()
-        .then((jsonRes)=>{
-          if(jsonRes.status==200){
-            console.log(jsonRes.data);
-            makeTransaction(index,jsonRes.data)
-            .then(async(res)=>{
-              const mappingJson = await res.json();
-              console.log(mappingJson);
-            })
-            .catch((err)=>{
-              console.log(err);
-            })
-          }
-        })
+        if(res.status==200){
+          console.log(res.data);
+          makeTransaction(index,res.data)
+          .then(async(res)=>{
+            const mappingJson = await res.json();
+            console.log(mappingJson);
+          })
+        }
       })
     }else{
       // redirection

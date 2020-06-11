@@ -12,6 +12,7 @@ import MyPage from '../content/navBar/MyPage';
 import MyTransaction from '../content/navBar/MyTransaction';
 import Board from '../content/navBar/Board';
 import ItemInfo from '../shop/shopping/iteminfo';
+import BoardInfo from './navBar/board/boardInfo';
 
 const ContentDiv = styled.div`
   width: 75%;
@@ -28,7 +29,6 @@ const Content = () => {
     <ContentDiv>
       <Switch>
         <Route exact path={path}>
-          여기다가 Content 담아
         </Route>
         <Route path={`/grunge/:page`}>
           <Grunge/>
@@ -62,6 +62,9 @@ const Content = () => {
         </Route>
         <Route path={`/mytransaction`}>
           <MyTransaction/>
+        </Route>
+        <Route path={`/boardInfo/:board_idx`}>
+          <BoardInfo/>
         </Route>
       </Switch>
     </ContentDiv>

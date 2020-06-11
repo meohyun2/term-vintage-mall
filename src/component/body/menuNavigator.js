@@ -9,6 +9,10 @@ const MenuDiv = styled.div`
   border: 1px solid red;
 `;
 
+const H2 = styled.h2`
+  font-size:20pt;
+  color:skyblue;
+`;
 const MenuNavigator = () =>{
 
   let {path,url} = useRouteMatch();
@@ -17,25 +21,25 @@ const MenuNavigator = () =>{
     <MenuDiv>
       <ul>
         <li>
-          <Link to={`/amekaji/1`}>Amekaji</Link>
+          <Link to={`/amekaji/1`}><H2>Amekaji</H2></Link>
         </li>
         <li>
-          <Link to={`/americanVintage/1`}>American Vintage</Link>
+          <Link to={`/americanVintage/1`}><H2>American Vintage</H2></Link>
         </li>
         <li>
-          <Link to={`/hippy/1`}>Hippy</Link>
+          <Link to={`/hippy/1`}><H2>Hippy</H2></Link>
         </li>
         <li>
-          <Link to={`/workwear/1`}>Workwear</Link>
+          <Link to={`/workwear/1`}><H2>Workwear</H2></Link>
         </li>
         <li>
-          <Link to={`/oldschool/1`}>Old School</Link>
+          <Link to={`/oldschool/1`}><H2>Old School</H2></Link>
         </li>
         <li>
-          <Link to={`/funk/1`}>Funk</Link>
+          <Link to={`/funk/1`}><H2>Funk</H2></Link>
         </li>
         <li>
-          <Link to={`/grunge/1`}>Grunge</Link>
+          <Link to={`/grunge/1`}><H2>Grunge</H2></Link>
         </li>
       </ul>
     </MenuDiv>
