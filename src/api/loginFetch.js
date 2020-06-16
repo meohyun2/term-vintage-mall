@@ -17,7 +17,6 @@ module.exports = {
    })
    .then((res)=>{
      console.log(res);
-     alert('로그인 성공하셨어요.');
      return res;
    })
    .catch((err)=>{

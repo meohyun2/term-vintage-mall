@@ -40,11 +40,18 @@ const SignInPage = ({history}) =>{
   const onFinish = async(values) => {
     const loginResult = await LoginFetch(values.username,values.password)
     if(loginResult){
+
       console.log(loginResult);
       const loginResultJson = await loginResult.json();
       console.log(loginResultJson);
-      sessionStorage.setItem("token",loginResultJson.data.token);
-      history.push('/');
+      if(loginResultJson.status == '200'){
+        alert('로그인 성공하셨어요.');
+        sessionStorage.setItem("token",loginResultJson.data.token);
+        history.push('/');
+      }else{
+        alert('로그인 실패.');
+      }
+    }else{
     }
   };
 

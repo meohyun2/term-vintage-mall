@@ -2,16 +2,18 @@ const fetch = require('node-fetch');
 
 module.exports={
   makeTransaction : async(product_idx,token) =>{
+    const header = new Headers();
+    header.append("Authorization",`Bearer ${sessionStorage.getItem("token")}`);
     const makeTransactionURL = `http://localhost:4000/transaction`;
     return fetch(makeTransactionURL,{
       method: 'POST',
       headers : {
         'Content-Type' : 'application/json;charset=utf-8'
       },
+      "headers":header,
       body : JSON.stringify(
       {
         product_idx:product_idx,
-        token : token
       }
       )
     })
