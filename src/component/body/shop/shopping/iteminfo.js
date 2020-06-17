@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import styled from 'styled-components';
 import {itemInfoFetch} from '../../../../api/itemInfoFetch';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import {Button} from 'antd';
 import {makeTransaction} from '../../../../api/transactionFetch';
 import {checkAuth} from '../../../../api/authentification';
@@ -44,7 +44,6 @@ const ItemInfo = ({history}) =>{
     }else{
       // redirection
       alert('로그인 하세요.');
-      history.push('/logIn');
     }
   }
 
@@ -59,7 +58,7 @@ const ItemInfo = ({history}) =>{
     .catch((err)=>{
       console.log("왜 에러낫징",err);
     })
-  },[])
+  },[history])
   return(
     <Div>
       <IMG src="https://raucohouse.com/web/product/tiny/20200605/4144cc282e34669792d65c74569bcd3b.jpg"></IMG>
